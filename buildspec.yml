@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - ./install.sh
+  build:
+    commands:
+      - docker build -t boyan-test:latest .
+  post_build:
+    commands:
+      - ./post_build.sh
